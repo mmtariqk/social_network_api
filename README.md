@@ -7,5 +7,5 @@ This is a RESTFUL API app for a social network web application using mongoDB (No
 The Technologies used in this app are: 
 Express.js for routing, a MongoDB database, dotenv to secure sensitive data like passwords and your keys, Mongoose ODM, and Moment.js package to format time.
 
-### Installation
-Clone the repo to your local machine, install the necessary dependencies, run npm install in your terminal.
+### Installation & Usage
+Clone the repo to your local machine, install the necessary dependencies, run npm install in your terminal. Finally npm start in your terminal to start the app and sync with mongoose. 
