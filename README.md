@@ -14,7 +14,7 @@ Clone the repo to your local machine, install the necessary dependencies, run np
 This app shows the database for a social networking application. API routes are tested through Postman api testing tool.
 
 - GET route to get and return all users and all thoughts
-- GET route to get and return a single user and a single thought
+- GET route to get and return a single user and a single thought by ID
 - POST route for adding a new user in the MongoDB database
 - PUT route for updating a user in the MongoDB database
 - DELETE route to delete users from the MongoDB database
