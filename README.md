@@ -1,7 +1,7 @@
 ## Social Network API using MongoDB
 
 ### Description
-This is a RESTFUL API app for a social network web application using mongoDB (Nosql) where users can get all users, share their thoughts, react to friends’ thoughts, and create a friend list as well as delete a friend. This application performs a full fledge CRUD operation. 
+This is a RESTFUL API app for a social network web application using NoSQL (mongoDB) where users can get all users, share their thoughts, react to friends’ thoughts, and create a friend list as well as delete a friend. This application performs a full fledge CRUD operation. 
 
 ### App built in 
 The Technologies used in this app are: 
