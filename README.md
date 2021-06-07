@@ -9,3 +9,28 @@ Express.js for routing, a MongoDB database, dotenv to secure sensitive data like
 
 ### Installation & Usage
 Clone the repo to your local machine, install the necessary dependencies, run npm install in your terminal. Finally npm start in your terminal to start the app and sync with mongoose. 
+
+### Application Demo
+This app shows the database for a social networking application. API routes are tested through Postman api testing tool.
+
+- GET route to get and return all users and all thoughts
+- GET route to get and return a single user and a single thought
+- POST route for adding a new user in the MongoDB database
+- PUT route for updating a user in the MongoDB database
+- DELETE route to delete users from the MongoDB database
+- POST route for creating a thought in the MongoDB database
+- PUT route for updating a thought in the MongoDB database
+- DELETE route to delete a thought from the MongoDB database
+- POST route to create a reaction
+- DELETE route to remove a reaction
+- POST route for adding a friend to a user's friend list
+- DELETE route for removing a friend from a user's friend list
+
+
+
+
+
+
+
+
+
