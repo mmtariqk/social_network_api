@@ -25,7 +25,7 @@ const thoughtController = {
     },
         
      // Here to add thought to user
-    addThought({ params, body }, res) {
+    addThought: async ({ params, body }, res) => {
         console.log(body);
         Thought.create(body)
             .then(({ _id }) => {

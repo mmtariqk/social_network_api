@@ -22,99 +22,112 @@ const userController = {
   // },
 
   // Here to get one user by id
-  getUserById({ params }, res) {
-    User.findOne({ _id: params.id })
-      .populate("thoughts")
-      .populate("friends")
-      .select("-__v")
-      .then((dbUserData) => {
-        if (!dbUserData) {
-          res.status(404).json({ message: "No user found with this id!" });
-          return;
-        }
-        res.json(dbUserData);
-      })
-      .catch((err) => {
-        console.log(err);
-        res.status(400).json(err);
-      });
+  getUserById: async (req, res) => {
+    try {
+      const dbUserData = await User.findOne({ _id: req.params.id })
+        .populate("thoughts")
+        .populate("friends")
+        .select("-__v");
+
+      if (!dbUserData) {
+        res.status(404).json({ message: "No user found with this id!" });
+        return;
+      }
+      res.json(dbUserData);
+    } catch (err) {
+      console.log(err);
+      res.status(400).json(err);
+    }
   },
 
   // Here to createUser
-  createUser({ body }, res) {
-    User.create(body)
-      .then((dbUserData) => res.json(dbUserData))
-      .catch((err) => res.status(400).json(err));
+  createUser: async (req, res) => {
+    try {
+      const dbUserData = await User.create(req.body);
+      res.json(dbUserData);
+    } catch (err) {
+      res.status(400).json(err);
+    }
   },
 
   // Here to update user by id
-  updateUser({ params, body }, res) {
-    User.findOneAndUpdate({ _id: params.id }, body, {
+  updateUser: async(req, res) => {
+    try{
+    
+    const dbUserData = await User.findOneAndUpdate({ _id: req.params.id }, req.body, {
       new: true,
       runValidators: true,
     })
-      .then((dbUserData) => {
+      
         if (!dbUserData) {
           res.status(404).json({ message: "No user found with this id!" });
           return;
         }
         res.json(dbUserData);
-      })
-      .catch((err) => res.status(400).json(err));
+      }
+      catch(err) 
+      {res.status(400).json(err);
+      }
   },
 
   // Here to delete user
-  deleteUser({ params }, res) {
-    User.findOneAndDelete({ _id: params.id })
-      .then((dbUserData) => {
+  deleteUser: async (req, res) => {
+
+    try {
+    
+    const dbUserData = await User.findOneAndDelete({ _id: req.params.id })
+      
         if (!dbUserData) {
           return res
             .status(404)
             .json({ message: "No user found with this id!" });
         }
-
-        
-      })
-      .then(() => {
+            
         res.json({ message: "user has been deleted." });
-      })
-      .catch((err) => res.status(400).json(err));
-  },
+      }
+        catch(err) {res.status(400).json(err);
+        }
+      },
+
 
   // Here to add friend
-  addFriend({ params }, res) {
-    User.findOneAndUpdate(
-      { _id: params.id },
-      { $addToSet: { friends: params.friendId } },
+  addFriend: async (req, res) => {
+
+    try{
+    
+    const dbUserData = await User.findOneAndUpdate(
+      { _id: req.params.id },
+      { $addToSet: { friends: req.params.friendId } },
       { runValidators: true }
     )
-      .then((dbUserData) => {
+      
         if (!dbUserData) {
           res.status(404).json({ message: "No user found with this id!" });
           return;
         }
-        res.json({message: "friend added", data:dbUserData});
-      })
-      .catch((err) => res.status(400).json(err));
+        res.json({ message: "friend added", data: dbUserData });
+      }
+      catch(err) {res.status(400).json(err);
+      }
   },
 
   // Here to remove friend
-  removeFriend({ params }, res) {
-    User.findOneAndUpdate(
-      { _id: params.id },
-      { $pull: { friends: params.friendId } },
+  removeFriend: async (req, res) => {
+    try {
+    const dbUserData = await User.findOneAndUpdate(
+      { _id: req.params.id },
+      { $pull: { friends: req.params.friendId } },
       { runValidators: true }
     )
-      .then((dbUserData) => {
+      
         if (!dbUserData) {
           res.status(404).json({ message: "No user found with this id!" });
           return;
         }
-        res.json({message: "friend removed", data:dbUserData});
-      })
-      .catch((err) => res.status(400).json(err));
-  },
-};
-
-
+        res.json({ message: "friend removed", data: dbUserData });
+      }
+      catch(err) {res.status(400).json(err);
+  }
+},
+}
 module.exports = userController;
