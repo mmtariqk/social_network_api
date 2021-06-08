@@ -27,6 +27,9 @@ This app shows the database for a social networking application. API routes are 
 - POST route for adding a friend to a user's friend list
 - DELETE route for removing a friend from a user's friend list
 
+### Screenshots
+<img width="1376" alt="Screen Shot 2021-06-08 at 9 01 30 AM" src="https://user-images.githubusercontent.com/77028806/121219456-8e890400-c838-11eb-9993-7c51e217ea14.png">
+
 ### User Story
 
 ```text
