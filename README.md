@@ -10,6 +10,8 @@ Express.js for routing, a MongoDB database, dotenv to secure sensitive data like
 ### Installation & Usage
 Clone the repo to your local machine, make sure to install MongoDB <a href="https://www.mongodb.com/cloud/atlas/lp/try2?utm_source=google&amp;utm_campaign=gs_americas_united_states_search_brand_atlas_desktop&amp;utm_term=%2Binstall%20%2Bmongodb&amp;utm_medium=cpc_paid_search&amp;utm_ad=b&amp;utm_ad_campaign_id=1718986498&amp;gclid=Cj0KCQjw2NyFBhDoARIsAMtHtZ5LlBWhU-XQp1KCC2a74fYkoDZzxTUgwGEbSFkBFei53cHnQJOSkFEaAg9tEALw_wcB" rel="nofollow">website.</a>, install the necessary dependencies, run npm install in your terminal. Finally npm start in your terminal to start the app and sync with mongoose. 
 
+### Walkthrough Video - Part-1
+https://drive.google.com/file/d/13yJH5tjm8Cp1Z4PLkeq2C33zk0GhC_ho/view
 
 ### Application Demo — The meat and potatoes of the app
 
