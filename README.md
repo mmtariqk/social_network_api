@@ -20,7 +20,7 @@ https://drive.google.com/file/d/1y8TXHT3WjEzeI9TI2N9GLqqVhhD5LoNS/view
 Video Part-3
 https://drive.google.com/file/d/1PGqTrqFgP5zwHfJb2POIHAy5A-uKcuYu/view
 
-### Application Demo — The meat and potatoes of the app
+### Application Demo Gif Animations — The meat and potatoes of the app
 
 Demo-1:
 https://drive.google.com/file/d/1R11MdrPhwblZy1H79iGzrP9ALPhoV7WU/view
